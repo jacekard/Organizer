@@ -7,5 +7,5 @@ Pre-alpha list of planning features:
 - to-do list with alerts and notification
 - separate list for project deadlines
 - built-in Messenger app
-- one, standalone executable file with ability to start with Windows.
-
+- notification for new emails via Gmail
+- one, standalone executable file with ability to start with Windows
