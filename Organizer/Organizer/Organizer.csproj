@@ -99,7 +99,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Icons\" />
+    <Resource Include="Assets\Icons\closeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\menuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\arrowLeftIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\arrowRightIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\syncIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\musicIcon.png" />
+    <Resource Include="Assets\Icons\searchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\notesIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

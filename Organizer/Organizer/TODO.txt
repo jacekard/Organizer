@@ -1,0 +1,44 @@
+﻿#########################
+ 
+ -------------
+ TODO:
+ -------------
+
+  ICONS:
+	1. Create icon in Windows Tray
+	2. Minimalize window to tray icon.
+
+  SHORTCUTS:
+	3. Drag and drop .lnk files (shortcuts)
+	4. Display shortcuts in grid
+
+  MENU/PAGES:
+	-. Create pages in one window (?)
+	5. Create menu page
+	6. Enable/Disable feature icons
+
+  SLIDE ANIMATION:
+	-. Create slide animation 
+	-. Add left/right array feature
+	-. Slide on Hover
+
+  NOTES:
+	-. Sticky notes as separate windows
+
+  MESSENGER:
+	-. Add messenger icon
+	-. Create Facebook Login API
+	-. Make notifications
+
+
+  SETTINGS (optional):
+    -. Create config.xml file
+	-. Change background (create color picker)
+	-. Search bar with Google API/Windows folder search
+	-. Alerts settings
+	-. Notes settings
+	-. Messenger settings
+	-. Enable sliding on hover/arrows
+
+
+#########################

@@ -4,20 +4,70 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Organizer"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" SizeToContent="WidthAndHeight"
+        Title="MainWindow"
         WindowStyle="None" AllowsTransparency="True"
-        Background="Transparent" 
+        Background="Transparent" Margin="0"
         WindowStartupLocation="Manual"
         Loaded="Window_Loaded"
-        >
-    <Border Background="#FF961D36" CornerRadius="10,10,10,10" Padding="6" Opacity="0.95" MouseDown="DraggableWindow">
-        <DockPanel>
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,4">
-                <!--<Button Click="close_program" Width="25" Margin="178,0,6,0" Height="25">X</Button>
-                <Button Click="minimize_program" Width="25" Margin="118,0,66,0" Height="25">_</Button>
-                <Button Click="maximize_program" Width="25" Height="25" Margin="146,3,38,2">F</Button>-->
-            </Grid>
-        </DockPanel>
-    </Border>
+        SizeToContent="Manual"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}" d:DesignWidth="149.4" d:DesignHeight="758.6">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard >
+                    <!--<DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="0:0:.8"  From="0" To="1" AccelerationRatio=".1"/>
+                    <DoubleAnimation Storyboard.TargetProperty="Left" From="1600" To="1400" AccelerationRatio=".1"/>-->
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <DockPanel>
+        <Button DockPanel.Dock="Left" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+            <Image Source="Assets/Icons/arrowLeftIcon.png" Height="20" Width="20"/>
+        </Button>
+
+        <Border Background="#FF5A9AE0" CornerRadius="15,0,0,15" Padding="0" MouseDown="DraggableWindow">
+            <DockPanel DockPanel.Dock="Right" Width="130" Margin="0,0,0,0.4">
+                <Button DockPanel.Dock="Left" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                    <Image Source="Assets/Icons/arrowRightIcon.png" Height="20" Width="20"/>
+                </Button>
+
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="-10.6,0,-0.2,0" Height="29">
+                    <Button Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/closeIcon.png"/>
+                    </Button>
+
+                    <Button Click="OpenMenu" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/menuIcon.png"/>
+                    </Button>
+                    <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/syncIcon.png"/>
+                    </Button>
+                    <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/musicIcon.png"/>
+                    </Button>
+                    <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/searchIcon.png"/>
+                    </Button>
+                    <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                        <Image Source="Assets/Icons/notesIcon.png"/>
+                    </Button>
+
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Margin="-20,5,0,0">
+                    <Rectangle HorizontalAlignment="Stretch" Fill="Black" Height="1"/>
+                    <TextBox BorderThickness="0" FontFamily="Abadi" FontSize="16px" Background="Transparent" Text="notifications" Margin="0,5,0,0" TextAlignment="Center" Height="20" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="110">
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="130">
+
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+    </DockPanel>
 </Window>

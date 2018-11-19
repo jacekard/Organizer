@@ -20,13 +20,14 @@ namespace Organizer
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly int WindowMargin = 100;
+        private int WindowMargin { get; set; } = 100;
+        public bool WindowSlideState { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-
-            SizeToContent = System.Windows.SizeToContent.Manual;
+            this.DataContext = this;
+            this.WindowSlideState = false;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -40,9 +41,20 @@ namespace Organizer
         private void DraggableWindow(object sender, MouseButtonEventArgs e)
 
         {
-            this.DragMove();
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
         }
 
-   
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OpenMenu(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
