@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Organizer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" SizeToContent="WidthAndHeight"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" 
+        WindowStartupLocation="Manual"
+        Loaded="Window_Loaded"
+        >
+    <Border Background="#FF961D36" CornerRadius="10,10,10,10" Padding="6" Opacity="0.95" MouseDown="DraggableWindow">
+        <DockPanel>
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,4">
+                <!--<Button Click="close_program" Width="25" Margin="178,0,6,0" Height="25">X</Button>
+                <Button Click="minimize_program" Width="25" Margin="118,0,66,0" Height="25">_</Button>
+                <Button Click="maximize_program" Width="25" Height="25" Margin="146,3,38,2">F</Button>-->
+            </Grid>
+        </DockPanel>
+    </Border>
 </Window>
