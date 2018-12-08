@@ -30,14 +30,14 @@
             <Image Source="Assets/Icons/arrowLeftIcon.png" Height="20" Width="20"/>
         </Button>
 
-        <Border Background="#FF5A9AE0" CornerRadius="15,0,0,15" Padding="0" MouseDown="DraggableWindow">
+        <Border Background="#FF5A9AE5" CornerRadius="15,0,0,15" Padding="0" MouseDown="DraggableWindow">
             <DockPanel DockPanel.Dock="Right" Width="130" Margin="0,0,0,0.4">
                 <Button DockPanel.Dock="Left" Background="Transparent" Width="20" Height="20" BorderThickness="0">
                     <Image Source="Assets/Icons/arrowRightIcon.png" Height="20" Width="20"/>
                 </Button>
 
-                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="-10.6,0,-0.2,0" Height="29">
-                    <Button Background="Transparent" Width="20" Height="20" BorderThickness="0">
+                <DockPanel DockPanel.Dock="Top" FlowDirection="RightToLeft" Margin="-20,5,0,0" Height="30">
+                    <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0" >
                         <Image Source="Assets/Icons/closeIcon.png"/>
                     </Button>
 
@@ -56,15 +56,18 @@
                     <Button Click="CloseWindow" Background="Transparent" Width="20" Height="20" BorderThickness="0">
                         <Image Source="Assets/Icons/notesIcon.png"/>
                     </Button>
+                </DockPanel>
 
-                </StackPanel>
                 <StackPanel DockPanel.Dock="Top" Margin="-20,5,0,0">
                     <Rectangle HorizontalAlignment="Stretch" Fill="Black" Height="1"/>
                     <TextBox BorderThickness="0" FontFamily="Abadi" FontSize="16px" Background="Transparent" Text="notifications" Margin="0,5,0,0" TextAlignment="Center" Height="20" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" />
                 </StackPanel>
-                <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="110">
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="130">
 
+                <StackPanel x:Name="LinkGrid" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Width="110" Margin="-10,0,0,0"
+                            PreviewMouseLeftButtonDown="LinkGrid_PreviewMouseLeftButtonDown"
+                            PreviewMouseMove="LinkGrid_PreviewMouseMove">
+                    <Rectangle HorizontalAlignment="Stretch" Fill="Black" Height="1" Margin="0,150,0,0"/>
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="130">
                     </Grid>
                 </StackPanel>
             </DockPanel>

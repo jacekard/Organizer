@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CustomControl1.cs" />
+    <Compile Include="CustomControl2.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -99,29 +105,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Icons\closeIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Icons\menuIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Icons\arrowLeftIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\Icons\arrowRightIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Icons\syncIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Assets\Icons\addAlertIcon.png" />
+    <Resource Include="Assets\Icons\arrowLeftIcon.png" />
+    <Resource Include="Assets\Icons\arrowRightIcon.png" />
+    <Resource Include="Assets\Icons\baseline_dehaze_black_18dp.png" />
+    <Resource Include="Assets\Icons\chatIcon.png" />
+    <Resource Include="Assets\Icons\checkedIcon.png" />
+    <Resource Include="Assets\Icons\closeIcon.png" />
+    <Resource Include="Assets\Icons\createFolderIcon.png" />
+    <Resource Include="Assets\Icons\createNoteIcon.png" />
+    <Resource Include="Assets\Icons\dartLeftIcon.png" />
+    <Resource Include="Assets\Icons\dartRightIcon.png" />
+    <Resource Include="Assets\Icons\deleteIcon.png" />
+    <Resource Include="Assets\Icons\dismissIcon.png" />
+    <Resource Include="Assets\Icons\emptyNotificationIcon.png" />
+    <Resource Include="Assets\Icons\errorIcon.png" />
+    <Resource Include="Assets\Icons\favouriteIcon.png" />
+    <Resource Include="Assets\Icons\folderIcon.png" />
+    <Resource Include="Assets\Icons\menuIcon.png" />
     <Resource Include="Assets\Icons\musicIcon.png" />
-    <Resource Include="Assets\Icons\searchIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Assets\Icons\newNotificationIcon.png" />
     <Resource Include="Assets\Icons\notesIcon.png" />
+    <Resource Include="Assets\Icons\searchIcon.png" />
+    <Resource Include="Assets\Icons\shareIcon.png" />
+    <Resource Include="Assets\Icons\syncIcon.png" />
+    <Resource Include="Assets\Icons\uncheckedIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

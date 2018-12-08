@@ -22,6 +22,7 @@ namespace Organizer
     {
         private int WindowMargin { get; set; } = 100;
         public bool WindowSlideState { get; set; }
+        public Point StartMousePosition { get; set; }
 
         public MainWindow()
         {
@@ -55,6 +56,27 @@ namespace Organizer
         private void OpenMenu(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void LinkGrid_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            //store the mouse position
+            StartMousePosition = e.GetPosition(null);
+        }
+
+        private void LinkGrid_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            //get the current mouse position
+            var mousePosition = e.GetPosition(null);
+            var diff = StartMousePosition - mousePosition;
+
+            if (e.LeftButton == MouseButtonState.Pressed &&
+               Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance ||
+               Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)
+            {
+                //http://www.wpftutorial.net/draganddrop.html
+                //tutorial
+            }
         }
     }
 }
